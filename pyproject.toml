@@ -1,0 +1,27 @@
+[project]
+name = "flashlink"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.32",
+  "gunicorn>=23",
+  "sqlalchemy[asyncio]>=2.0.36",
+  "asyncpg>=0.30",
+  "alembic>=1.14",
+  "redis[hiredis]>=5.2",
+  "arq>=0.26",
+  "pydantic>=2.10",
+  "pydantic-settings>=2.7",
+  "python-jose[cryptography]>=3.3",
+  "passlib[bcrypt]>=1.7",
+  "loguru>=0.7",
+  "orjson>=3.10",
+  "slowapi>=0.1.9",
+  "opentelemetry-api>=1.29",
+  "prometheus-client>=0.21",
+  "httpx>=0.28",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "ruff", "mypy", "locust"]
